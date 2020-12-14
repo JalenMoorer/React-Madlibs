@@ -1,0 +1,119 @@
+html,
+body {
+  margin: 0; 
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+#root {
+  margin: 0px;
+  height: 100%;
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+
+  & label {
+    font-size: 16px;
+    font-family: sans-serif;
+  }
+  & input {
+    display: block;
+    margin: 8px 0 8px 0;
+    width: 90%;
+    height: 32px;
+    font-size: 16px;
+    border: none;
+  }
+}
+
+.heading {
+  font-size: 22px;
+  font-family: sans-serif;
+  margin-bottom: 2rem;
+}
+
+.editView {
+  
+  & > #About {
+    display: none;
+    border: none;
+    flex-basis: 0%;
+    width: 0%;
+  }
+
+  & > #Essay {
+    width: 100%;
+    flex-basis: 100%;
+    border-width: 2.5rem 2.5rem 2.5rem 2.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #efefef;
+
+    & .essayText {
+      width: 35%;
+      background-color: #fff;
+      min-height: 200px;
+      padding: 16px;
+      overflow: auto;
+
+      & .answer-text {
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+#About,
+#Essay {
+  flex-basis: 50%;
+  width: 50%;
+  padding:25px;
+  border-color: #3f48cc;
+  border-style: solid;
+  overflow-y: auto;
+}
+
+#About {
+  background-color: #efefef;
+  border-width: 2.5rem 0 2.5rem 2.5rem;
+
+  & .form-group {
+    margin-bottom: 3rem;
+  }
+}
+
+#Essay {
+  background-color: #fff;
+  border-width: 2.5rem 2.5rem 2.5rem 0;
+
+ .essayButton {
+  margin-top: 4rem;
+  background-color: #00d57f;
+  min-height: 40px;
+  width: 100px;
+  border: 2px solid #00d57f;
+  border-radius: 4px;
+  color: white;
+}
+
+ .essayButton:hover {
+    cursor: pointer;
+  }
+
+  .essayText {
+    font-size: 16px;
+    font-family: sans-serif;
+    width: 75%;
+
+    .answer-text {
+      font-weight: 600;
+    }
+  }
+}
